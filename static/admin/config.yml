@@ -32,6 +32,24 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
 
+  - name: "user"
+    label: "User"
+    folder: "src/pages/users"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "users",
+        }
+      - { label: "Name", name: "username", widget: "string" }
+      - { label: "Created Date", name: "createddate", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "User Image", name: "userimage", widget: image }
+      - { label: "Roles", name: "userrole", widget: "list" }
+      - { label: "Address", name: "location", widget: "map" }
   - name: "pages"
     label: "Pages"
     files:
